@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Run_li_shop | Gestión de Inventario</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --accent: #e74c3c;
+            --light: #ecf0f1;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background-color: var(--light);
+            color: var(--primary);
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            background: white;
+            margin: auto;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: var(--accent);
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 10px;
+        }
+        .status-badge {
+            background: #27ae60;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+        }
+        .footer {
+            margin-top: 30px;
+            font-size: 0.9rem;
+            color: #7f8c8d;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <span class="status-badge">Módulo de Trazabilidad v1.0</span>
+        <h1>👟 Run_li_shop: Panel de Control</h1>
+        
+        <p>Bienvenido al sistema de gestión. Este módulo permite visualizar la relación entre los <strong>folios de embarque</strong> y el <strong>stock mínimo</strong> del catálogo.</p>
+
+        ### Resumen de Actividades Actuales:
+        <ul>
+            <li>Sincronización con base de datos MySQL (Local).</li>
+            <li>Validación de tallas y cantidades por modelo.</li>
+            <li>Cálculo dinámico de costos de importación.</li>
+        </ul>
+
+        <blockquote>
+            "La meta es lograr una trazabilidad del 100% desde la recepción hasta la entrega."
+        </blockquote>
+
+        <div class="footer">
+            <p>Desarrollado por: <strong>Tu Nombre</strong> 🚀</p>
+            <p>© 2026 Run_li_shop Project - Colaboración en GitHub</p>
+        </div>
+    </div>
+
+</body>
+</html>
