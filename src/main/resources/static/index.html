@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Run Li Shop - Catálogo</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f4f4f4; text-align: center; }
+        .container { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; padding: 20px; }
+        .card { background: white; padding: 15px; border-radius: 10px; shadow: 0 4px 8px rgba(0,0,0,0.1); width: 200px; }
+        h1 { color: #333; }
+        .tenis-nombre { font-weight: bold; color: #d32f2f; text-transform: uppercase; }
+    </style>
+</head>
+<body>
+<h1>👟 Run Li Shop - Panel de Control</h1>
+<div id="catalogo" class="container">
+</div>
+
+<script>
+    function cargarTenis() {
+        fetch('http://localhost:8080/modelos')
+            .then(response => response.json())
+            .then(data => {
+                const lista = document.getElementById('catalogo');
+                lista.innerHTML = ''; // Limpiar antes de cargar
+                data.forEach(tenis => {
+                    lista.innerHTML += `
+                            <div class="card">
+                                <p class="tenis-nombre">${tenis.nombre}</p>
+                                <p>ID: ${tenis.id}</p>
+                            </div>
+                        `;
+                });
+            })
+            .catch(error => console.error('Error:', error));
+    }
+    // Cargar al abrir la página
+    cargarTenis();
+    // Recargar cada 5 segundos para ver cambios en tiempo real
+    setInterval(cargarTenis, 5000);
+</script>
+</body>
+</html>
